@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* IM_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-19 08:19+0000\n"
+"PO-Revision-Date: 2018-07-19 08:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: IM_contract
+#: model:ir.model,name:IM_contract.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_common_component_ids
+#: model:ir.model.fields,field_description:IM_contract.field_project_project_common_component_ids
+msgid "Common Components to invoice"
+msgstr "Componentes comunes a facturar"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_component_ids
+msgid "Component"
+msgstr "Componentes"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_invoice_component_ids
+#: model:ir.model.fields,field_description:IM_contract.field_project_project_invoice_component_ids
+msgid "Components to invoice"
+msgstr "Componentes a facturar"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_account_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: IM_contract
+#: model:ir.model,name:IM_contract.model_account_analytic_contract_line
+msgid "Contract Lines"
+msgstr "Líneas de contrato"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: IM_contract
+#: code:addons/IM_contract/models/contract.py:138
+#, python-format
+msgid "Error evaluating code.\n"
+"Details: %s"
+msgstr "Error evaluando el código.\n"
+"Detalles: %s"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: IM_contract
+#: model:ir.model.fields,help:IM_contract.field_account_analytic_account_by_component
+#: model:ir.model.fields,help:IM_contract.field_project_project_by_component
+msgid "If checked, contract create one invoice by component"
+msgstr "Si esta marcado, el conrato crea una factura por cada línea de componentes"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_common_percent_impl
+msgid "Implementation Percent"
+msgstr "Porcentaje para implementación"
+
+#. module: IM_contract
+#: model:ir.model.fields,help:IM_contract.field_account_analytic_account_component_common_percent_impl
+msgid "Implementation percent for common components"
+msgstr "Porcentaje para implementación de componentes comunes"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_by_component
+#: model:ir.model.fields,field_description:IM_contract.field_project_project_by_component
+msgid "Invoice by component"
+msgstr "Factura por componente (cadena)""
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: IM_contract
+#: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component_common_percent_maint
+msgid "Maintaining Percent"
+msgstr "Porcentaje para mantenimiento"
+
+#. module: IM_contract
+#: model:ir.model.fields,help:IM_contract.field_account_analytic_account_component_common_percent_maint
+msgid "Maintaining percent for common components"
+msgstr "Porcentaje para mantenimiento de componentes comunes"
+
+#. module: IM_contract
+#: code:addons/IM_contract/models/contract.py:140
+#, python-format
+msgid "No valid result returned."
+msgstr "Ha devuelto un valor no válido."
+
+#. module: IM_contract
+#: code:addons/IM_contract/models/contract.py:114
+#, python-format
+msgid "No valid type."
+msgstr "El tipo de cálculo en linea no es válido."
+
+#. module: IM_contract
+#: model:ir.model,name:IM_contract.model_account_analytic_account_component
+msgid "account.analytic.account.component"
+msgstr "Componente"
+
+#. module: IM_contract
+#: model:ir.model,name:IM_contract.model_contract_line_qty_formula
+msgid "contract.line.qty.formula"
+msgstr "Fórmula"
+

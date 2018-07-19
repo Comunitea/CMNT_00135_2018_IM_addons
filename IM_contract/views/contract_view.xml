@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_analytic_account_recurring_form_form" model="ir.ui.view">
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="contract_variable_quantity.account_analytic_account_recurring_form_form"/>
+        <field name="arch" type="xml">
+            <field name="skip_zero_qty" position="after">
+                <newline/>
+                <field name="by_component"/>
+                <newline/>
+                <field name="invoice_component_ids" attrs="{'invisible': [('by_component', '=', False)]}" colspan="4">
+                    <tree editable="bottom">
+                        <field name="component_ids" widget="many2many_tags"/>
+                        <field name="common_percent_impl"/>
+                        <field name="common_percent_maint"/>
+                    </tree>
+                </field>
+                <field name="common_component_ids" attrs="{'invisible': [('by_component', '=', False)]}" colspan="4" widget="many2many_tags"/>
+            </field>
+        </field>
+    </record>
+
+
+
+    <record id="account_analytic_account_component_form" model="ir.ui.view">
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="contract_variable_quantity.account_analytic_account_recurring_form_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='recurring_invoice_line_ids']//field[@name='qty_formula_id']" position="attributes">
+                <attribute name="attrs">{'required': [('qty_type', 'in', ['variable','component'])], 'invisible': [('qty_type', 'not in', ['variable','component'])]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
