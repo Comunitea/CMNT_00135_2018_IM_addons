@@ -12,7 +12,8 @@
     'depends': [
         'base',
         'web',
-        'account_due_dates_str'
+        'account_due_dates_str',
+        'IM_contract'
     ],
     'data': [
         'views/ir_qweb.xml',

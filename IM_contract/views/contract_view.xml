@@ -17,6 +17,7 @@
                     </tree>
                 </field>
                 <field name="common_component_ids" attrs="{'invisible': [('by_component', '=', False)]}" colspan="4" widget="many2many_tags"/>
+                <field name="report_description" options="{'style-inline': true}" colspan="4"/>
             </field>
         </field>
     </record>
