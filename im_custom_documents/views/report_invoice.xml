@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_invoice_document_custom" inherit_id="account.report_invoice_document">
+        <!-- Add vencimientos -->
+        <xpath expr="//p[@t-if='o.payment_term_id']" position="replace">
+            <p t-if="o.payment_term_id.note">
+                <strong>Payment Term:</strong>
+                <span t-field="o.payment_term_id.note"/>
+            </p>
+            <p t-if="o.expiration_dates_str">
+                <strong>Vencimientos:</strong>
+                <p t-field="o.expiration_dates_str"/>
+            </p>
+        </xpath>
+    </template>
+</odoo>
