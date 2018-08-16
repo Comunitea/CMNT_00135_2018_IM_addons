@@ -39,6 +39,9 @@ class AccountAnalyticAccount(models.Model):
     common_component_ids = fields.Many2many(
         string="Common Components to invoice",
         comodel_name='jira.project.component')
+    report_description = fields.Html('Report Description', 
+                                     default='', sanitize_style=True, 
+                                     strip_classes=True)
 
     @api.multi
     def _create_invoice(self):

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="custom_contact" inherit_id="base.contact">
+        <xpath expr="//t[@t-call='base.contact_name']/.." position="after">
+            <div t-if="vat and 'vat' in fields">
+                VAT: <span itemprop="vat" t-esc="vat"/>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="external_layout_standard_add_vat" inherit_id="web.external_layout_background">
+        <!-- Add VAT to header -->
+        <xpath expr="//span[@t-field='company.partner_id']" position="attributes">
+            <attribute name="t-field-options">{"widget": "contact", "fields": ["address", "vat"], "no_marker": true}</attribute>
+        </xpath>
+
+        <!-- Remove VAT from footer -->
+        <xpath expr="//li[@t-if='company.vat']" position="replace">
+        </xpath>
+    </template>
+</odoo>
