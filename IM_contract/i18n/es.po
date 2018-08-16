@@ -95,7 +95,7 @@ msgstr "Porcentaje para implementación de componentes comunes"
 #: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_by_component
 #: model:ir.model.fields,field_description:IM_contract.field_project_project_by_component
 msgid "Invoice by component"
-msgstr "Factura por componente (cadena)""
+msgstr "Factura por componente (cadena)"
 
 #. module: IM_contract
 #: model:ir.model.fields,field_description:IM_contract.field_account_analytic_account_component___last_update
