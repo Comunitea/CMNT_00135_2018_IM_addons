@@ -8,15 +8,16 @@
             <field name="skip_zero_qty" position="after">
                 <newline/>
                 <field name="by_component"/>
+                <field name="project_ids" attrs="{'invisible': True}"/>
                 <newline/>
                 <field name="invoice_component_ids" attrs="{'invisible': [('by_component', '=', False)]}" colspan="4">
                     <tree editable="bottom">
-                        <field name="component_ids" widget="many2many_tags"/>
+                        <field name="component_ids" widget="many2many_tags"  domain="[('project_id','in', parent.project_ids)]"/>
                         <field name="common_percent_impl"/>
                         <field name="common_percent_maint"/>
                     </tree>
                 </field>
-                <field name="common_component_ids" attrs="{'invisible': [('by_component', '=', False)]}" colspan="4" widget="many2many_tags"/>
+                <field name="common_component_ids" attrs="{'invisible': [('by_component', '=', False)]}" colspan="4" widget="many2many_tags" domain="[('project_id','in', project_ids)]"/>
                 <field name="report_description" options="{'style-inline': true}" colspan="4"/>
             </field>
         </field>
