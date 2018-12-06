@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
+
+    <template id="report_assets_common_no_background" inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+                <link href="/im_custom_documents/static/src/less/report_custom.less" rel="stylesheet"/>
+            </xpath>
+    </template>
+
+    <template id="external_layout_custom_im" inherit_id="web.external_layout_background">
+        <xpath expr="//div[@class='article o_report_layout_background']" position="attributes">
+            <attribute name="class">article o_report_layout_no_background</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='header o_background_header']/div/h3" position="attributes">
+            <attribute name="class">mt4 text-right</attribute>
+        </xpath>
+
+        <xpath expr="//img[@t-if='company.logo']" position="attributes">
+            <attribute name="class">pull-right</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='footer o_background_footer']" position="attributes">
+            <attribute name="class">footer o_background_footer_no_lines</attribute>
+        </xpath>
+    </template>
+
+
     <template id="report_invoice_document_custom" inherit_id="account.report_invoice_document">
         <!-- Add vencimientos -->
         <xpath expr="//p[@t-if='o.payment_term_id']" position="replace">
